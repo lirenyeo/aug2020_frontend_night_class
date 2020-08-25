@@ -1,0 +1,40 @@
+/* grandparent */
+.sanitizer {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border: dotted 5px tomato;
+  margin: 100px auto;
+}
+
+/* parent */
+.mask {
+  margin: auto;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  height: 80%;
+  width: 80%;
+  border: solid 2px cornflowerblue;
+}
+
+/* alex */
+.sanitizer a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#box {
+  height: 100px;
+  width: 100px;
+  background: rgba(0, 0, 0, .8);
+
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  transform: translateX(-50%);
+}

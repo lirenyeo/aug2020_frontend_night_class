@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Solway', serif;
+}
+
+nav, footer {
+  background: #3a3a3a;
+}
+
+section#content {
+  background: lightgray;
+  padding: 15px;
+}
+
+nav {
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  /* line-height: 60px; */
+}
+
+/* If you want content to always expand fully */
+/* #content {
+  min-height: calc(100vh - 60px - 104px);
+} */
+
+#content h1 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+/* <img> is inline by default,
+by changing it to block,
+we can apply left/right auto margin
+to center it. */
+#content img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+#content img:hover {
+  transform: scale(0.95);
+  transition: 500ms;
+}
+
+.desc {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: dashed 3px black;
+
+  width: 95%; /* for mobile */
+  max-width: 420px; /* for big screen */
+
+  /* another approach to consider */
+  /* width: 60%;
+  min-width: 320px; */
+}
+
+.desc p::first-letter {
+  font-weight: bold;
+}
+
+footer {
+  padding: 20px;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+footer button {
+  background: rgb(246,	219,	44);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}

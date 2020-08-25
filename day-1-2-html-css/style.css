@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #3a3a3a;
+  color: white;
+}
+
+h2 {
+  color: blue;
+}
+
+#about-section {
+  color: pink;
+}
+
+.important-text {
+  color: red;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.box {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background: black;
+  /* margin: 40px; */
+  padding: 20px; /* four sides */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

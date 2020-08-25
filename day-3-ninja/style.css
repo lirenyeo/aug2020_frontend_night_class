@@ -1,0 +1,72 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #ee7354;
+  margin: 0;
+}
+
+header, section {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 95%;
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+header {
+  text-align: center;
+  background-image: url('header-bg.jpg');
+  background-size: cover;
+  color: white;
+}
+
+header a {
+  color: #e77354;
+}
+
+h1 {
+  color: #e77354;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+section {
+  background: white;
+  border: solid 3px black;
+}
+
+h2 {
+  color: #e77354;
+  text-decoration: underline;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+#hover-image  {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#hover-image p {
+  color: #e77354;;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#hover-image img:hover {
+  animation: spin 1s linear infinite;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table, td {
+  border: 1px solid #e77354;
+  padding: 10px;
+}

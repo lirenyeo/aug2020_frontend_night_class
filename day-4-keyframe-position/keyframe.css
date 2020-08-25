@@ -1,0 +1,21 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  1% { transform: rotate(-10deg); }
+  2% { transform: rotate(10deg); }
+  3% { transform: rotate(-5deg); }
+  4% { transform: rotate(5deg); }
+  5% { transform: rotate(0deg); }
+}
+
+@keyframes colorChange {
+  from { background: blue; }
+  from { background: green;; }
+}
+
+#box {
+  height: 100px;
+  width: 100px;
+  margin: 100px;
+  background: red;
+  animation: spin 10s infinite, colorChange 10s infinite;
+}

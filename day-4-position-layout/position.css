@@ -1,0 +1,54 @@
+nav, aside, section, footer {
+  position: fixed;
+}
+
+nav {
+  background: gold;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+}
+
+section {
+  background: orange;
+  top: 10vh;
+  left: 0;
+  bottom: 40px;
+  right: 30%;
+
+  display: flex;
+  justify-content: center; /* X */
+  align-items: center; /* Y */
+  flex-wrap: wrap;
+}
+
+aside {
+  background: cornflowerblue;
+  top: 10vh;
+  right: 0;
+  bottom: 40px;
+  width: 30%;
+}
+
+footer {
+  background: deeppink;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
