@@ -1,0 +1,27 @@
+#box {
+  position: fixed;
+  height: 80vh;
+  width: 80vw;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: dotted 2px blueviolet;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: brown;
+}
+
+img {
+  height: 200px;
+}

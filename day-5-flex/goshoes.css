@@ -1,0 +1,104 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+nav button {
+  display: none;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a#brand-link {
+  font-weight: 600;
+}
+
+article, aside {
+  position: fixed;
+  width: 50vw;
+  height: calc(100vh - 44px);
+}
+
+article {
+  z-index: 2;
+  left: 0;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+article #email-input {
+  border: none;
+  border-bottom: solid 1px gray;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+article button {
+  border: none;
+  background: darkslategray;
+  color: white;
+  padding: 10px 15px;
+}
+
+article h1 {
+  margin: 0;
+}
+
+article h3 {
+  font-weight: 300;
+}
+
+aside {
+  z-index: 1;
+  background: url('https://goshoe-next.netlify.app/shoes.png');
+  background-size: cover;
+  background-position: center;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: none;
+  }
+
+  nav button {
+    display: block;
+  }
+
+  nav a#brand-link {
+    display: block;
+  }
+
+  article, aside {
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
+
+  aside {
+    opacity: .5;
+    filter: blur(2px);
+  }
+}

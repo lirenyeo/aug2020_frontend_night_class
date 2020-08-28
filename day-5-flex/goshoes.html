@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="goshoes.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <a href="#" id="brand-link">GOSHOE.</a>
+    <button>X</button>
+    <a href="#">Home</a>
+  </nav>
+
+  <article>
+    <h1>Our new website is on its way</h1>
+    <h3>Sign up to be the first to know when we launch.</h3>
+    <input id="email-input" type="text" placeholder="Enter your email" >
+    <button id="notify">Notify Me</button>
+  </article>
+  <aside></aside>
+</body>
+<script>
+  const btn = document.getElementById('notify')
+  btn.onclick = function() {
+    document.body.style.background = 'red'
+  }
+</script>
+</html>
