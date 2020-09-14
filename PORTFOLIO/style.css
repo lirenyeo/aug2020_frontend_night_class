@@ -1,0 +1,15 @@
+.theme-btn {
+  background: #c96480;
+  color: white;
+}
+
+#img-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row img {
+  width: 100%;
+}
