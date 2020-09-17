@@ -1,0 +1,63 @@
+/* DO NOT MODIFY THIS FILE */
+
+h1 {
+  color: #f70757;
+  font-family: 'Arial';
+}
+
+body {
+  background: gray;
+}
+
+header {
+  text-align: center;
+  color: orangered;
+}
+
+section {
+  background: white;
+  border: 5px dotted orange;
+}
+
+header,
+section {
+  padding: 20px;
+  margin: 20px 50px;
+  border-radius: 12px;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+h2 {
+  color: orangered;
+}
+
+table,
+tr,
+td {
+  border-width: 1px;
+  border-style: dotted;
+  border-color: black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+}
+
+
+/* Utility Class */
+
+.text-bold-white {
+  font-weight: 900 !important;
+  color: white !important;
+}

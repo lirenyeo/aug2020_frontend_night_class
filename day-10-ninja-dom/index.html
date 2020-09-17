@@ -1,0 +1,86 @@
+<!-- DO NOT MODIFY THIS FILE -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Interact using JS</title>
+  </head>
+
+  <body>
+    <article>
+      <header>
+        <img
+          id="my-face"
+          src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png"
+        />
+
+        <h1 id="name">Ninja Joe</h1>
+        <p class="descriptions">
+          Hello there! I'm learning <strong>HTML and CSS</strong> at
+          <em>NEXT Academy</em>.
+        </p>
+
+        <p class="descriptions">
+          I like coding and climbing up trees to hide myself quickly.<br />
+          You can't see me in class because I'm good at hiding.<br />
+          I spent most of my times answering questions on <a href="https://www.reddit.com/r/Ninja/">Ninja Subreddit</a>.
+        </p>
+      </header>
+
+      <!-- Skills and education Section -->
+      <section>
+        <h2>Skills</h2>
+
+        <div id="skill-images">
+          <img src="https://as2.ftcdn.net/jpg/01/66/18/41/500_F_166184137_UyphZANJknmdbJmjMlHXR1ipGOfOA8ZU.jpg" />
+        </div>
+
+        <ul id="skills-list">
+          <li>Coding HTML/CSS</li>
+          <li>Throwing shurikens</li>
+        </ul>
+
+        <h2>Education</h2>
+
+        <ol id="education-list">
+          <li>The hidden school of Ninja, Osaka</li>
+          <li>Stealth Master Class, Berlin University</li>
+        </ol>
+      </section>
+
+      <!-- Employment section -->
+      <section>
+        <h2>Employment</h2>
+
+        <table id="employment-table">
+          <tr>
+            <td>Web Developer</td>
+            <td>Ninja Joe Sdn Bhd</td>
+            <td>2019 - Current</td>
+          </tr>
+
+          <tr>
+            <td>Intern</td>
+            <td>Ninja Van Delivery</td>
+            <td>2016-2018</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="random-section">
+        <p>Sometimes the background color in this box is black, and these texts become unreadable.</p>
+        <p>Detect the color of this background, and change the text to white when background is black!</p>
+      </section>
+    </article>
+  </body>
+  <script>
+    const colorOpts = ['black', 'white']
+    document.getElementById('random-section').style.backgroundColor = colorOpts[Math.floor(Math.random() * colorOpts.length)]
+  </script>
+
+  <script src="challenge1.js"></script>
+  <script src="challenge2.js"></script>
+  <script src="challenge3.js"></script>
+</html>
