@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="beer.png"/>
+  <link rel="icon" type="image/png" href="beer.png" />
 
   <!-- bootstrap css-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -25,20 +25,18 @@
 <body>
   <!-- navbar -->
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">My Portfolio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Contact Me</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+        <!--
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -50,7 +48,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
@@ -66,21 +64,52 @@
   </div>
   <!-- hero end -->
 
-  <div class="container">
+  <section id="portfolio" class="container">
     <div class="row">
+
+      <!-- Name Greeter -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card">
-          <img class="card-img-top" src="https://www.funbrain.com/assets/img/content-cards/F2qRmLhRnmebc8jJAUjr_GuessTheNumber%403x.png" alt="Card image cap">
+          <img class="card-img-top"
+            src="https://image.freepik.com/free-vector/young-men-greeting-each-other_89224-2609.jpg"
+            alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Number Guessing Game</h5>
-            <p class="card-text">Javascript exercise</p>
-            <a href="number-guess/number.html" class="btn btn-primary">Go</a>
+            <h5 class="card-title">Name Greeter</h5>
+            <p class="card-text">Basic Javascript exercise</p>
+            <a href="name-greeter/greet.html" class="btn btn-primary">Go</a>
           </div>
         </div>
-
       </div>
+
+      <!-- Number Guessing Game -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img class="card-img-top"
+            src="https://www.funbrain.com/assets/img/content-cards/F2qRmLhRnmebc8jJAUjr_GuessTheNumber%403x.png"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Number Guessing Game</h5>
+            <p class="card-text">How many times does it take to guess the right number?</p>
+            <a href="number-guess/guess.html" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elusive Button Game -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="https://i.ebayimg.com/images/g/7EsAAOSwpa1ZzASW/s-l300.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Elusive Button</h5>
+            <p class="card-text">Can you catch the button?</p>
+            <a href="elusive-btn/elusive.html" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
 
 
   <!----------------------------------------->
@@ -90,40 +119,32 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Drop Me A Message!</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Your Name</label>
+              <input type="text" class="form-control" placeholder="How should I address you?">
             </div>
-          </div>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-            Learn More
-          </button>
-          ...
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Message</label>
+              <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn theme-btn">Save changes</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
