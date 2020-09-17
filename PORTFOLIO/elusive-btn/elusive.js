@@ -1,23 +1,31 @@
 let counter = 0
 const x = document.querySelector('#start')
 const title = document.querySelector('h1')
+const countSpan = document.querySelector('#counter')
 
 x.onclick = function() {
-  x.innerHTML = 'merry christmas'
-  x.style.borderRadius = '50%'
-  window.location.href = "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+  x.innerHTML = 'are you happy now?'
 }
 
 x.onmouseover = function() {
-  counter = counter + 1
-  // create 2 random numbers, store them in variable
-  if (counter < 6) {
-    const randX = Math.random() * 500
-    const randY = Math.random() * 500
-    x.style.transform = `translate(${randX}px, ${randY}px)`
-  } else {
-    title.innerHTML = 'NO MORE $1000, sorry!'
-    x.innerHTML = 'I GIVE UP, touch me now!'
-    x.style.background = 'red'
+  if (counter > 3) {
+    title.innerHTML = 'I will stop moving...just click'
+    return
   }
+
+  // counter++
+  counter = counter + 1
+
+  countSpan.innerHTML = counter
+
+  let plusOrMinus = 1
+  if (Math.random() < 0.5) {
+    plusOrMinus = -1
+  }
+
+  // create 2 random numbers, store them in variable
+  const randX = Math.random() * (window.innerWidth/2 - 100) * plusOrMinus
+  const randY = Math.random() * (window.innerHeight/2 - 100) * plusOrMinus
+
+  x.style.transform = `translate(${randX}px, ${randY}px)`
 }
