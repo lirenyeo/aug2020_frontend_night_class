@@ -1,0 +1,28 @@
+@keyframes rise {
+  from { bottom: -100px; }
+  to { bottom: 600px; }
+}
+
+body {
+  text-align: center;
+  background: lightyellow;
+}
+
+#box {
+  height: 600px;
+  width: 95%;
+  max-width: 600px;
+  background: lightblue;
+  margin: auto;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  height: 100px;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+}

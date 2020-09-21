@@ -76,8 +76,13 @@
     </article>
   </body>
   <script>
-    const colorOpts = ['black', 'white']
-    document.getElementById('random-section').style.backgroundColor = colorOpts[Math.floor(Math.random() * colorOpts.length)]
+    const colorOpts = ['black', 'white', 'purple', 'red']
+    const randomNumber = Math.random() * colorOpts.length
+    const randomColorIndex = Math.floor(randomNumber)
+
+    const rs = document.querySelector('#random-section')
+    rs.style.backgroundColor = colorOpts[randomColorIndex]
+
   </script>
 
   <script src="challenge1.js"></script>
