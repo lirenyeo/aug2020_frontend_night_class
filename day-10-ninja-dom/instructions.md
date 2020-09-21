@@ -15,10 +15,13 @@ Modify **only** `challenge1.js`
 1. Change background color of the entire page
 1. Add a background image to `<header>`
 1. Change the color of all `<h2>`s using `for` loop
-1. Change `Ninja Joe` name to something else
-1. Change the contents of `.descriptions` to something else
-1. Add a new skill to the skill list
-1. Add a new education to the education list
+1. Update the profile page to your personal info:
+    - name
+    - descriptions
+    - Skills
+    - Education
+    - Employment
+1. Change profile picture and skill picture
 
 
 ### Challenge 2:

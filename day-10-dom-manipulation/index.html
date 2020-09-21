@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+  <style>
+    .abc {
+      color: red;
+    }
+
+    .colorful-text {
+      color: purple;
+      font-size: 2em;
+      font-style: italic;
+      border: solid 1px blue;
+      padding: 5px;
+      margin: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a title</h1>
+  <p>This is subtitle</p>
+
+  <section id="things">
+    <p>Here is a list of my favorite things:</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <ul class="the-list">
+
+      <li>write code</li>
+    </ul>
+
+  </section>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, delectus!</p>
+
+  <script>
+    let myName = 'blahblah'
+    const title = document.querySelector('h1')
+    const itemList = document.querySelector('.the-list')
+    const listDesc = document.querySelector('#things p')
+
+    const pTags = document.querySelectorAll('p')
+    pTags.forEach(kitten => {
+      kitten.style.color = 'blue'
+    })
+
+    title.onclick = function() {
+      title.innerHTML = 'this is a modified title'
+      title.classList.add('colorful-text')
+
+      listDesc.style.color = 'blue'
+      itemList.insertAdjacentHTML('beforeend', `
+        <li class="abc" id="asdf">
+          This is JS-generated list item
+        </li>
+      `)
+    }
+
+  </script>
+</body>
+</html>
