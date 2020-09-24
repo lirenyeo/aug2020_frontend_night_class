@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="balloon.css">
   <title>How many 🎈 can you pop?</title>
 </head>
+
 <body>
   <audio src="assets/balloon-pop.mp3"></audio>
 
   <h1>Score: <span id="score-count">0</span></h1>
-  <h2>You have 5 lifes left</h2>
+  <h2>You have <span id="life-count">5</span> lifes left</h2>
 
-  <div id="box">
+  <div id="box"></div>
 
-  </div>
 
   <script src="balloon.js"></script>
 </body>
+
 </html>
