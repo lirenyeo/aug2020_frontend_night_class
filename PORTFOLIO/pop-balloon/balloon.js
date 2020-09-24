@@ -1,5 +1,4 @@
 const MAX_LIFE = 5
-
 let score = 0
 let life = MAX_LIFE
 let balloonInterval
@@ -11,6 +10,10 @@ const subtitle = document.querySelector('h2')
 const startBtn = document.querySelector('#start-btn')
 const resetBtn = document.querySelector('#reset-btn')
 
+
+box.ondragstart = function() {
+  return false
+}
 
 function startGame() {
   life = MAX_LIFE
@@ -35,10 +38,14 @@ function displayLifeCount() {
 }
 
 function addBalloon() {
+  // fastest balloon takes 1 second
+  let modifier = Math.max(1, 3 - (score * 0.1))
+  let speed = Math.random() * 3 + modifier + 's'
+  console.log(modifier, speed)
   const balloon = document.createElement('img')
   balloon.src = 'assets/red-balloon.png'
   balloon.style.left = Math.random() * (box.clientWidth - 100) + 'px'
-  balloon.style.animationDuration = Math.random() * 3 + 2 + 's'
+  balloon.style.animationDuration = speed
 
   balloon.onanimationend = function () {
     life--
