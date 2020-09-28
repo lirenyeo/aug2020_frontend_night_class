@@ -1,0 +1,23 @@
+<style>
+  .box {
+    border: solid 2px red;
+  }
+</style>
+
+<div class="box">
+  <button>Click A</button>
+  <button>Click B</button>
+  <button>Click C</button>
+  <button>Click D</button>
+</div>
+
+
+<script>
+  const box = document.querySelector('.box')
+  box.onclick = (event) => {
+    if (event.target.tagName == 'BUTTON') {
+      event.target.remove()
+    }
+  }
+
+</script>
