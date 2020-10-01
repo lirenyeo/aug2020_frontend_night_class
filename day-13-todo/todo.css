@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background: darkslategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+#todo-input, #add-btn {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  border: solid 1px white;
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.3em;
+}
+
+#add-btn:disabled {
+  color: gray;
+  border-color: gray;
+}
+
+#todo-list {
+  color: darkslategray;
+  margin-top: 20px;
+  font-size: 1.4em;
+  background: #e8e8e8;
+  border-radius: 5px;
+}
+
+#todo-list .item {
+  cursor: pointer;
+  padding: 15px 20px;
+  border-bottom: solid 1px darkslategray;
+}
+
+#todo-list .item:hover {
+  background-color: white;
+}
+
+#todo-list .item:last-child {
+  border: none;
+}

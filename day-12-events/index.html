@@ -2,6 +2,14 @@
   .box {
     border: solid 2px red;
   }
+
+  .circle {
+    height: 50px;
+    width: 50px;
+    border: solid 1px blue;
+    background: transparent;
+    border-radius: 50%;
+  }
 </style>
 
 <div class="box">
@@ -11,13 +19,41 @@
   <button>Click D</button>
 </div>
 
+<h1>Click <strong>me for something</strong></h1>
+
+<form action="">
+  <input type="text" id="text-input">
+  <input id="submit-btn" type="submit" value="go!" disabled>
+</form>
 
 <script>
   const box = document.querySelector('.box')
-  box.onclick = (event) => {
+  const title = document.querySelector('h1')
+  const textInput = document.querySelector('#text-input')
+  const submitBtn = document.querySelector('#submit-btn')
+
+  textInput.oninput = e => {
+    if (e.target.value.length >= 3) {
+      // enable the go! button
+      submitBtn.disabled = false
+    } else {
+      submitBtn.disabled = true
+    }
+  }
+
+  title.onclick = e => {
+    console.log(e.currentTarget)
+    e.currentTarget.style.color = 'blue'
+  }
+
+
+  box.onclick = event => {
+    console.log(event.currentTarget)
     if (event.target.tagName == 'BUTTON') {
       event.target.remove()
     }
   }
+
+
 
 </script>
