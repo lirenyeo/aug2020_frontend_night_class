@@ -8,8 +8,9 @@ fetch('https://simple-crud-server.glitch.me/getTodos')
   .then((result) => {
     // console.log(result)
     result.forEach((item) => {
-      console.log(item)
+      // console.log(item)
       const newItem = document.createElement('div')
+      newItem.id = item.id
       newItem.classList.add('item')
       newItem.innerText = item.todo
       list.insertAdjacentElement('afterbegin', newItem)
@@ -22,27 +23,35 @@ todoForm.onsubmit = (e) => {
     return
   }
 
+  // disable button & change text to 'Adding...'
+  addButton.disabled = true
+  addButton.value = 'Adding...'
+
   fetch('https://simple-crud-server.glitch.me/addTodo', {
     method: 'POST',
     body: JSON.stringify({ todo: todoInput.value }),
     headers: { 'Content-Type': 'application/json' },
+  })
+  .then(response => response.json())
+  .then(result => {
+    if (result.message == 'success') {
+      const newItem = document.createElement('div')
+      newItem.classList.add('item')
+      newItem.innerText = todoInput.value
+      list.insertAdjacentElement('afterbegin', newItem)
+
+      // clear the todoInput
+      todoInput.value = ''
+
+      // revert button text to 'Add Todo'
+      addButton.value = 'Add Todo'
+    }
   })
 
   // dangerous way:
   // list.insertAdjacentHTML('afterbegin', `
   //   <div class="item">${todoInput.value}</div>
   // `)
-
-  // a safer way:
-  const newItem = document.createElement('div')
-  newItem.classList.add('item')
-  newItem.innerText = todoInput.value
-  list.insertAdjacentElement('afterbegin', newItem)
-
-  // clear the todoInput
-  todoInput.value = ''
-  // disable button
-  addButton.disabled = true
 }
 
 todoInput.oninput = () => {
@@ -52,5 +61,13 @@ todoInput.oninput = () => {
 }
 
 list.onclick = (e) => {
-  e.target.remove()
+  e.target.innerHTML = '<small><strong>Deleting...</strong></small>'
+  fetch(`https://simple-crud-server.glitch.me/deleteTodo?id=${e.target.id}`, {
+    method: 'POST'
+  })
+  .then(resp => resp.json())
+  .then(result => {
+    console.log(result)
+    e.target.remove()
+  })
 }
