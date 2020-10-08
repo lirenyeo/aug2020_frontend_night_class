@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gif.css">
+  <title>Gif Generator</title>
+</head>
+<body>
+  <input type="text" id="tag-input" placeholder="Tag (Optional)">
+  <button id="gif-btn">GIF IT TO ME!</button>
+  <div id="joke-container"></div>
+  <div id="gif-container"></div>
+
+
+  <script>
+    const API_KEY = 'Up4MYygxUCF8IJh2dEn5tzMMKtA0LshF'
+
+    const tagInput = document.querySelector('#tag-input')
+    const gifBtn = document.querySelector('#gif-btn')
+    const jokeContainer = document.querySelector('#joke-container')
+    const gifContainer = document.querySelector('#gif-container')
+
+    gifBtn.onclick = () => {
+      gifContainer.innerHTML = '<div class="lds-facebook"><div></div><div></div><div></div></div>'
+      fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${tagInput.value}`)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        gifContainer.innerHTML = `<img src="${result.data.images.original.url}">`
+      })
+
+      fetch('https://api.chucknorris.io/jokes/random')
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        jokeContainer.innerHTML = result.value
+      })
+
+    }
+  </script>
+</body>
+</html>
